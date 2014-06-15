@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+lib = File.expand_path("#{File.dirname(__FILE__)}/../lib")
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include? lib
+
+require 'daemons'
+require 'hinfo'
+
+Daemons.run("#{lib}/hinfo/main.rb", { :app_name => 'hinfo' })
+

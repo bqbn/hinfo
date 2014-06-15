@@ -1,0 +1,6 @@
+cupsd:
+  signature: cupsd
+  protocol: tcp
+rpcbind:
+  signature: ^rpcbind
+  protocol: tcp,udp
